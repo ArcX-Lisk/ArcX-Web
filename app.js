@@ -5,28 +5,7 @@ import bodyParser from 'body-parser'
 import WebSocket from 'ws'
 const app = express()
 
-// const ws = new WebSocket('ws://3.90.29.127:8900')
 
-// ws.on('open', () => {
-//   const msg = {
-//     jsonrpc: '2.0',
-//     id: 1,
-//     method: 'accountSubscribe',
-//     params: [
-//       '7RWKzu4G765oYsYHH6jgcsZLmYiJAfCDJkTWn93mfgmB',
-//       {
-//         encoding: 'base64',
-//         commitment: 'finalized'
-//       }
-//     ]
-//   }
-//   ws.send(JSON.stringify(msg))
-// })
-// ws.on('message', function (message) {
-//   const msg = JSON.parse(message)
-//   console.log('received: ', msg)
-//   console.log('param: ', JSON.stringify(msg.params))
-// })
 app.use(cors())
 app.use(express.urlencoded({ extended: true }))
 app.use(bodyParser.json())
